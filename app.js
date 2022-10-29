@@ -30,8 +30,6 @@ mongoose.connect(process.env.MONGO_DB_URL);
 const userSchema = new mongoose.Schema ({
     email: String,
     password: String,
-    googleId: String,
-    facebookId: String,
     secret: String
 });
 
