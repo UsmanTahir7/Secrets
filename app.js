@@ -74,7 +74,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID_FB,
       clientSecret: process.env.CLIENT_SECRET_FB,
-      callbackURL: "https://secret.up.railway.app/auth/facebook/secrets",
+      callbackURL: "https://secrets-usmantahir7.vercel.app/auth/facebook/secrets.",
     },
     function (accessToken, refreshToken, profile, cb) {
       User.findOrCreate({ facebookId: profile.id }, function (err, user) {
