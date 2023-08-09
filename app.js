@@ -54,7 +54,7 @@ passport.deserializeUser(function(id, done){
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "https://secret.up.railway.app/auth/google/secrets"
+    callbackURL: "https://secrets-project.fly.dev/auth/google/secrets"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({ googleId: profile.id }, function (err, user) {
@@ -66,7 +66,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.CLIENT_ID_FB,
     clientSecret: process.env.CLIENT_SECRET_FB,
-    callbackURL: "https://secret.up.railway.app/auth/facebook/secrets"
+    callbackURL: "https://secrets-project.fly.dev/auth/facebook/secrets"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({ facebookId: profile.id }, function (err, user) {
